@@ -37,8 +37,12 @@ section h2{
 }
 h3{
     font-size: 1.1rem;
+    margin: 0;
 }
-.contact,.education,.profile,.projects,.courses{
+h5,a{
+    margin: 0;
+}
+.contact,.education,.profile,.projects,.courses,.experience{
     border-bottom: 1px dotted var(--color);
     margin-bottom: 10px;
 }
@@ -87,4 +91,12 @@ header h3{
 }
 .list{
     line-height: 1.4rem;
+}
+.company{
+    display: inline;
+    font-weight: lighter;
+}
+.exp-span{
+    display: flex;
+    justify-content: space-between;
 }
