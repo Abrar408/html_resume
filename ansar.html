@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" type="text/css" href="./index.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <title>Ansar's Resume</title>
+
+    <style>
+      body {
+        width: 8.25in;
+        height: 11.75in;
+        padding: 0px 20px;
+        box-sizing: border-box;
+        font-family: Helvetica, sans-serif;
+        font-weight: 500;
+        color: rgb(89, 97, 104);
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+      }
+      span {
+        font-size: 0.85rem;
+      }
+      a {
+        text-decoration: none;
+        font-size: 14px;
+        color: rgb(89, 97, 104);
+      }
+      p {
+        line-height: 1.5rem;
+        font-size: 0.85rem;
+      }
+      .right-list {
+        list-style-type: none;
+      }
+      section h2 {
+        letter-spacing: 0.2rem;
+        font-weight: lighter;
+        font-size: 1.1rem;
+      }
+      h3 {
+        font-size: 1.1rem;
+        margin: 0;
+      }
+      h5,
+      a {
+        margin: 0;
+      }
+      .contact,
+      .education,
+      .profile,
+      .projects,
+      .experience,
+      .open-source,
+      .courses {
+        border-bottom: 1px dotted rgb(89, 97, 104);
+        margin-bottom: 10px;
+      }
+      .education h4 {
+        margin: 0px;
+      }
+      .education p {
+        margin-top: 0px;
+      }
+      header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0px;
+      }
+      header h1 {
+        letter-spacing: 0.5rem;
+        font-size: 2.3rem;
+        margin-bottom: 0px;
+        font-weight: lighter;
+      }
+      .section-line {
+        border: 1px solid rgb(89, 97, 104);
+      }
+      .content {
+        display: flex;
+      }
+      .left,
+      .right {
+        display: flex;
+        flex-direction: column;
+      }
+      .left {
+        flex: 1;
+        background-color: rgb(248, 248, 248);
+        padding: 0px 10px;
+      }
+      .right {
+        flex: 4;
+        padding: 0px 0.5rem 0px 1rem;
+      }
+      .contact-info {
+        margin: 15px 0px;
+        display: flex;
+      }
+      .contact-info span,
+      .contact-info a {
+        margin-left: 10px;
+      }
+      .list {
+        line-height: 1.4rem;
+        font-size: 0.9rem;
+      }
+      .company,
+      .description {
+        display: inline;
+        font-weight: lighter;
+      }
+      .exp-span {
+        display: flex;
+        justify-content: space-between;
+      }
+      .bullets {
+        letter-spacing: normal;
+        font-size: 0.85rem;
+        line-height: 1.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <h1>SYED ANSAR ALI</h1>
+    </header>
+    <div class="section-line"></div>
+    <div class="content">
+      <div class="left">
+        <section class="contact">
+          <h2>CONTACT</h2>
+          <div class="contact-info">
+            <i class="fa fa-phone"></i>
+            <a href="tel: 923132911209">+92 3132911209</a>
+          </div>
+          <div class="contact-info">
+            <i class="fa fa-envelope"></i>
+            <a href="mailto: syedansar1970@gmail.com">syedansar1970@gmail.com</a>
+          </div>
+          <!-- <div class="contact-info">
+            <i class="fa fa-github"></i>
+            <a href="https://github.com/Abrar408" target="_blank">github.com/Abrar408</a>
+          </div>
+          <div class="contact-info">
+            <i class="fa fa-linkedin"></i>
+            <a href="https://www.linkedin.com/in/syedabrar0635/" target="_blank">linkedin.com/in/syedabrar0635</a>
+          </div> -->
+          <!-- <div class="contact-info">
+                    <i class="fa fa-globe"></i>
+                    <a href="https://abrarsportfolio.netlify.app/" target="_blank">abrarsportfolio.netlify.app</a>
+                </div> -->
+        </section>
+
+        <section class="profile">
+          <h2>OBJECTIVE</h2>
+          <p>
+            Full Stack Developer experienced in building products for the web. Strong JavaScript knowledge, including
+            modern frameworks. Proficient in RESTful API development, front-end integration, and leveraging language
+            models (LLMs) to expedite the coding process
+          </p>
+        </section>
+        <section class="education">
+          <h2>EDUCATION</h2>
+          <h4>MS Data Science</h4>
+          <p>NED (ongoing)</p>
+          <h4>BE Electrical Engineering</h4>
+          <p>NUST, 2020</p>
+        </section>
+        <section class="skills">
+          <h2>SOFT SKILLS</h2>
+          <ul class="list">
+            <li>Communication</li>
+            <li>Collaboration</li>
+            <li>Time Management</li>
+            <li>Problem solving</li>
+          </ul>
+          <h2>HARD SKILLS</h2>
+          <ul class="list">
+            <li>Typescript</li>
+            <li>ExpressJS</li>
+            <li>NestJS</li>
+            <li>MySQL</li>
+            <li>MongoDB</li>
+            <li>NextJS</li>
+          </ul>
+        </section>
+      </div>
+      <div class="right">
+        <section class="experience">
+          <h2>PROFESSIONAL EXPERIENCE</h2>
+          <div class="exp-span">
+            <h3>
+              Associate Software Engineer,
+              <div class="company"><a href="https://sudofy.com/" target="_blank">Sudofy</a></div>
+            </h3>
+            <h5 class="company">Feb 2024 - Present</h5>
+          </div>
+          <ul class="bullets">
+            <li>Improved api response by 20% through database optimization</li>
+            <li>Built and managed RESTful APIs with Strapi, boosting backend modularity and scalability</li>
+            <li>Integrated low code tools such as Retool for administrative tasks, reducing manual effort by 40%</li>
+          </ul>
+          <div class="exp-span">
+            <h3>
+              Backend Engineer,
+              <div class="company"><a href="https://internativelabs.com/" target="_blank">Internative Labs</a></div>
+            </h3>
+            <h5 class="company">May 2023 - Feb 2024</h5>
+          </div>
+          <ul class="bullets">
+            <li>Enhanced collaboration, reducing integration delays by 30%</li>
+            <li>Boosted system efficiency by 20% through data processing optimizations</li>
+            <li>Resulted in improved user satisfaction due to a more responsive and reliable backend system</li>
+          </ul>
+        </section>
+        <section class="projects">
+          <h2>PROJECTS</h2>
+          <div class="exp-span">
+            <h3>Easy Sale MLS</h3>
+            <!-- <a href="https://zenithnovels.com" target="_blank"
+              ><span><u>zenithnovels.com</u></span></a
+            > -->
+          </div>
+          <ul class="bullets">
+            <li>
+              Developed a multi-listing service (MLS) web app providing end-to-end services including frontend, backend,
+              design and deployment
+            </li>
+            <li>Enables brokers to list and search boats, earning commission on sales</li>
+            <li>Allows the client to oversee all operations via a dedicated CMS panel</li>
+            <li>Tech Stack: Next js, Express js and PostgreSQL</li>
+            <li>Integrated Cloudinary for asset hosting, optimizing media content delivery</li>
+            <li>Deployed the app on a private server for better control and security</li>
+          </ul>
+        </section>
+        <section class="open-source">
+          <h2>OPEN SOURCE</h2>
+          <a href="https://www.npmjs.com/package/express-genie" target="_blank"
+            ><h3>
+              express-genie
+              <span class="description">(npm package for express js applications)</span>
+            </h3></a
+          >
+
+          <ul class="bullets">
+            <li>Automates folder and file creation, streamlining setup</li>
+            <li>Reduces development time by up to 20% through automated setup</li>
+            <li>Decreases the likelihood of configuration errors</li>
+          </ul>
+        </section>
+        <section class="courses">
+          <h2>PROFESSIONAL COURSES</h2>
+          <div class="exp-span">
+            <h3>
+              MERN Stack Bootcamp,
+              <div class="company"><a href="https://contour-software.com/" target="_blank">Contour Software</a></div>
+            </h3>
+          </div>
+          <ul class="bullets">
+            <li>3 month industry-led bootcamp</li>
+            <li>Acquired comprehensive web development expertise</li>
+            <li>Developed practical skills through real-world applications</li>
+            <li>Endorsed by prominent industry bodies PSEB and P@ASHA</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <!-- <footer>
+      <ul class="list">
+        <li>
+          <em
+            ><p>
+              This resume is made using HTML5 and CSS3, available on my portfolio at
+              <strong>abrarsportfolio.netlify.app</strong>
+            </p></em
+          >
+        </li>
+      </ul>
+    </footer> -->
+  </body>
+</html>
