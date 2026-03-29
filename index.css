@@ -1,114 +1,390 @@
+:root {
+  --text: #1f2937;
+  --muted: #6b7280;
+  --line: #e5e7eb;
+  --accent: #2563eb;
+  --bg: #ffffff;
+}
 
-/* @font-face{
-    font-family: "custom";
-    src: url(Roboto-Black.ttf)
-} */
-body{
-    width: 8.25in;
-    height: 11.75in;
-    padding: 0px 20px;
-    box-sizing: border-box;
-    font-family: Helvetica, sans-serif;
-    font-weight: 500;
-    color: rgb(89, 97, 104);
-    display: flex;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, "Segoe UI", Roboto, Arial, Helvetica, sans-serif;
+  line-height: 1.68;
+  letter-spacing: 0.01em;
+}
+
+body {
+  padding: 2.5rem 1.75rem 3.25rem;
+}
+
+.resume {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.resume-header {
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 1.35rem;
+  margin-bottom: 0.15rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+}
+
+.headline {
+  margin: 0.7rem 0 0;
+  font-size: 1.03rem;
+  line-height: 1.58;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.contact-line {
+  margin: 0.95rem 0 0;
+  font-size: 0.93rem;
+  line-height: 1.65;
+  color: var(--muted);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 0.65rem;
+  align-items: center;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s ease;
+}
+
+a:hover {
+  border-bottom-color: var(--accent);
+}
+
+section {
+  padding-top: 1.35rem;
+  margin-top: 1.45rem;
+  border-top: 1px solid var(--line);
+}
+
+h2 {
+  margin: 0 0 1rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: #111827;
+}
+
+p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.72;
+  text-wrap: pretty;
+}
+
+/* Comfortable line length for prose (lists use full width) */
+section > p:not(.inline-list) {
+  max-width: 65ch;
+}
+
+section > p.compact-meta {
+  max-width: none;
+}
+
+ul {
+  margin: 0.65rem 0 0;
+  padding-left: 1.45rem;
+}
+
+li {
+  margin: 0.58rem 0;
+  padding-left: 0.3rem;
+  font-size: 1rem;
+  line-height: 1.66;
+  text-wrap: pretty;
+}
+
+.role {
+  margin-top: 1.55rem;
+}
+
+.role:first-of-type {
+  margin-top: 0.45rem;
+}
+
+.role-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+
+h3 {
+  margin: 0;
+  font-size: 1.06rem;
+  line-height: 1.38;
+}
+
+.role h3 {
+  font-weight: 700;
+  color: var(--text);
+}
+
+.date-range {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.company {
+  margin: 0.28rem 0 0.5rem;
+  color: var(--muted);
+  font-size: 0.93rem;
+  line-height: 1.52;
+}
+
+.inline-list {
+  color: #374151;
+  font-size: 0.98rem;
+  line-height: 1.82;
+  letter-spacing: 0.008em;
+}
+
+.education-item + .education-item {
+  margin-top: 0.6rem;
+}
+
+.tech-groups {
+  list-style: none;
+  margin: 0.55rem 0 0;
+  padding: 0;
+}
+
+.tech-groups li {
+  margin: 0.35rem 0;
+  padding-left: 0;
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
+.tech-label {
+  display: inline-block;
+  min-width: 5.75rem;
+  font-weight: 700;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #374151;
+}
+
+.compact-meta {
+  margin: 0.45rem 0 0;
+  font-size: 0.96rem;
+  line-height: 1.62;
+  max-width: none;
+}
+
+.compact-meta:first-of-type {
+  margin-top: 0.25rem;
+}
+
+@media (max-width: 720px) {
+  body {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  .role-header {
     flex-direction: column;
-    margin: auto;
-    /* background-color: aquamarine; */
+    align-items: flex-start;
+    gap: 0.1rem;
+  }
 }
-span{
-    font-size: 0.85rem;
-}
-a{
+
+@media print {
+  /* Let the browser's Print dialog choose paper (A4 vs Letter); margins tune safe PDF bounds */
+  @page {
+    margin: 0.45in 0.55in;
+  }
+
+  html {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  body {
+    padding: 0;
+    margin: 0;
+    font-size: 11pt;
+    line-height: 1.58;
+    letter-spacing: 0.008em;
+    background: #fff !important;
+    color: #111827 !important;
+  }
+
+  .resume {
+    max-width: none;
+    width: 100%;
+    margin: 0;
+  }
+
+  /* Keep identity block on one page when possible */
+  .resume-header {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /*
+   * Headings: keep with at least one line of content below (reduces orphan headings).
+   * Do NOT force entire <article class="role"> to stay on one page — that + break-after on h2
+   * makes the browser jump the whole Experience block to the next page when the first role
+   * is tall, leaving a large white gap under Leadership.
+   */
+  h2 {
+    page-break-after: avoid;
+    break-after: avoid;
+    color: #1f2937 !important;
+  }
+
+  /* Let a role span pages if needed; keep title row + company line from awkward splits */
+  .role {
+    page-break-inside: auto;
+    break-inside: auto;
+  }
+
+  .role-header,
+  .company {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Safer than avoiding whole <section>: long Experience won't trap entire page in blank space */
+  section {
+    page-break-inside: auto;
+    break-inside: auto;
+  }
+
+  h1 {
+    font-size: 20pt;
+    color: #111827 !important;
+  }
+
+  h3 {
+    color: #111827 !important;
+  }
+
+  p,
+  li,
+  .headline,
+  .contact-line,
+  .company,
+  .date-range,
+  .inline-list {
+    color: #374151 !important;
+  }
+
+  .headline,
+  .company,
+  .date-range {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Room to breathe on paper */
+  section {
+    padding-top: 1.1rem;
+    margin-top: 1.2rem;
+  }
+
+  .resume-header {
+    padding-bottom: 1.2rem;
+  }
+
+  h2 {
+    margin-bottom: 0.72rem;
+    letter-spacing: 0.07em;
+  }
+
+  p,
+  .inline-list {
+    line-height: 1.68;
+  }
+
+  .inline-list {
+    line-height: 1.75;
+  }
+
+  .role {
+    margin-top: 1.2rem;
+  }
+
+  .role:first-of-type {
+    margin-top: 0.45rem;
+  }
+
+  ul {
+    margin-top: 0.55rem;
+  }
+
+  li {
+    margin: 0.42rem 0;
+    line-height: 1.6;
+    orphans: 2;
+    widows: 2;
+  }
+
+  .company {
+    margin-top: 0.25rem;
+    margin-bottom: 0.42rem;
+  }
+
+  .tech-groups li {
+    line-height: 1.52;
+  }
+
+  .compact-meta {
+    line-height: 1.58;
+    margin-top: 0.35rem !important;
+  }
+
+  a {
+    border-bottom: none;
     text-decoration: none;
-    font-size: 14px;
-    color: rgb(89, 97, 104);
+    color: inherit !important;
+  }
 
-}
-p{
-    line-height: 1.5rem;
-    font-size: 0.85rem;
-}
-.right-list{
-    list-style-type: none;
-}
-section h2{
-    letter-spacing: 0.2rem;
-    font-weight: lighter;
-    font-size: 1.1rem;
-}
-h3{
-    font-size: 1.1rem;
-    margin: 0;
-}
-h5,a{
-    margin: 0;
-}
-.contact,.education,.profile,.projects,.experience, .open-source, .courses{
-    border-bottom: 1px dotted rgb(89, 97, 104);
-    margin-bottom: 10px;
-}
-header{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0px;
-}
-header h1{
-    letter-spacing: 0.5rem;
-    font-size: 2.3rem;
-    margin-bottom: 0px;
-    font-weight: lighter;
-}
-/* header h3{
-    font-weight: lighter;
-    letter-spacing: 0.2rem;
-} */
-.section-line{
-    border: 1px solid rgb(89, 97, 104);
-}
-.content{
-    display: flex;
-}
-.left,.right{
-    display: flex;
-    flex-direction: column;
-}
-.left{
-    flex: 1;
-    background-color: rgb(248, 248, 248);
-    padding: 0px 10px;
-}
-.right{
-    flex: 4;
-    /* background-color: lightcyan; */
-    padding: 0px 0.5rem 0px 1rem;
-}
-.contact-info{
-    margin: 15px 0px;
-    display: flex;
-}
-.contact-info span,.contact-info a{
-    margin-left: 10px;
-}
-.list{
-    line-height: 1.4rem;
-}
-.company{
-    display: inline;
-    font-weight: lighter;
-}
-.description{
-    display: inline;
-    font-weight: lighter;
-    font-size: medium;
-}
-.exp-span{
-    display: flex;
-    justify-content: space-between;
-}
-.bullets{
-    letter-spacing: normal;
-    font-size: 0.85rem;
-    line-height: 1.5rem;
+  /* Optional: real URLs after links for PDFs where engines drop link targets (comment out if too noisy) */
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.82em;
+    color: #4b5563 !important;
+    font-weight: normal;
+  }
+
+  /* Contact line already shows readable paths; hide duplicate URL expansion */
+  .contact-line a[href^="http"]::after,
+  .company a[href^="http"]::after,
+  a.omit-print-href[href^="http"]::after {
+    content: none;
+  }
 }
