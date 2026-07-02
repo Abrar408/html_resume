@@ -1,302 +1,301 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <title>Anishfa's Resume</title>
+    <title>Anishfa Abrar - Resume</title>
 
     <style>
-      /* @font-face{
-    font-family: "custom";
-    src: url(Roboto-Black.ttf)
-} */
-      body {
-        width: 8.25in;
-        height: 11.75in;
-        padding: 0px 20px;
+      * {
         box-sizing: border-box;
-        font-family: Helvetica, sans-serif;
-        font-weight: 500;
-        color: rgb(89, 97, 104);
-        display: flex;
-        flex-direction: column;
+      }
+
+      body {
+        width: 8.5in;
+        min-height: 11in;
+        padding: 0.5in 0.6in;
         margin: auto;
-        /* background-color: aquamarine; */
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+        line-height: 1.5;
+        color: #333333;
       }
-      span {
-        font-size: 0.85rem;
-      }
+
       a {
         text-decoration: none;
-        font-size: 14px;
-        color: rgb(89, 97, 104);
+        color: #333333;
       }
+
       p {
-        line-height: 1.5rem;
-        font-size: 0.85rem;
+        margin: 0 0 8px 0;
       }
-      .right-list {
-        list-style-type: none;
-      }
-      section h2 {
-        letter-spacing: 0.2rem;
-        font-weight: lighter;
-        font-size: 1.1rem;
-      }
-      h3 {
-        font-size: 1.1rem;
-        margin: 0;
-      }
-      h5,
-      a {
-        margin: 0;
-      }
-      .contact,
-      .education,
-      .profile,
-      .projects,
-      .experience,
-      .open-source,
-      .courses,
-      .skills {
-        border-bottom: 1px dotted rgb(89, 97, 104);
-        margin-bottom: 10px;
-      }
+
       header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        text-align: center;
         margin-bottom: 20px;
       }
+
       header h1 {
-        letter-spacing: 0.5rem;
-        font-size: 2.3rem;
-        margin-bottom: 0px;
-        font-weight: lighter;
+        font-size: 26px;
+        letter-spacing: 2px;
+        margin: 0 0 5px 0;
+        font-weight: bold;
+        color: #111111;
       }
-      header h3 {
-        font-weight: lighter;
-        letter-spacing: 0.2rem;
+
+      header h2 {
+        font-size: 14px;
+        font-weight: 600;
+        margin: 0 0 8px 0;
+        letter-spacing: 0.5px;
+        color: #444444;
       }
-      .section-line {
-        border: 1px solid rgb(89, 97, 104);
+
+      .contact-line {
+        font-size: 12px;
+        color: #555555;
       }
-      .content {
-        display: flex;
+
+      section {
+        margin-bottom: 20px;
       }
-      .left,
-      .right {
-        display: flex;
-        flex-direction: column;
+
+      section h2 {
+        color: #222222;
+        font-size: 13px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        margin: 0 0 10px 0;
+        text-transform: uppercase;
+        border-bottom: 1px solid #999999;
+        padding-bottom: 2px;
       }
-      .left {
-        flex: 1;
-        background-color: rgb(248, 248, 248);
-        padding: 0px 10px;
+
+      .summary {
+        margin-bottom: 0;
       }
-      .right {
-        flex: 4;
-        /* background-color: lightcyan; */
-        padding: 0px 0.5rem 0px 1rem;
+
+      .experience-item,
+      .education-item {
+        margin-bottom: 15px;
       }
-      .contact-info {
-        margin: 15px 0px;
-        display: flex;
+
+      .experience-item:last-child,
+      .education-item:last-child {
+        margin-bottom: 0;
       }
-      .contact-info span,
-      .contact-info a {
-        margin-left: 10px;
+
+      /* Table layout handles baseline alignments without risking data scrambling in parser text streams */
+      .item-header-table {
+        width: 100%;
+        margin-bottom: 5px;
+        border-collapse: collapse;
       }
-      .list {
-        letter-spacing: normal;
-        font-size: 0.9rem;
-        line-height: 1.5rem;
+
+      .item-header-table td {
+        padding: 0;
+        vertical-align: bottom;
+      }
+
+      .title-cell {
+        text-align: left;
+        font-size: 13px;
+        color: #111111;
+      }
+
+      .title-cell .role {
+        font-weight: bold;
+      }
+
+      .title-cell .institution {
+        font-weight: normal;
+      }
+
+      .date-cell {
+        text-align: right;
+        font-size: 12px;
+        color: #555555;
+        width: 150px;
+      }
+
+      ul {
+        margin: 0;
         padding-left: 20px;
       }
-      .company {
-        display: inline;
-        font-weight: lighter;
+
+      li {
+        margin-bottom: 4px;
       }
-      .description {
-        display: inline;
-        font-weight: lighter;
-        font-size: medium;
+
+      li:last-child {
+        margin-bottom: 0;
       }
-      .exp-span {
-        display: flex;
-        justify-content: space-between;
+
+      /* Compact grid layout for skills allows linear text parsing while optimizing page real estate */
+      .skills-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6px 20px;
+        list-style-type: square;
+        padding-left: 20px;
       }
-      .bullets {
-        letter-spacing: normal;
-        font-size: 0.85rem;
-        line-height: 1.5rem;
+
+      .skills-grid li {
+        margin-bottom: 0;
+      }
+
+      @media print {
+        body {
+          width: 100%;
+          height: auto;
+          padding: 0.4in 0.5in;
+          margin: 0;
+        }
+
+        /* Ensures absolute fallback simplicity if the target machine handles print layers aggressively */
+        section {
+          page-break-inside: avoid;
+        }
       }
     </style>
   </head>
   <body>
-    <header class="header">
+    <header>
       <h1>ANISHFA ABRAR</h1>
-      <!-- <h3>CHEMISTRY TEACHER</h3> -->
+      <h2>Chemistry Teacher | Secondary & Higher Secondary Classes</h2>
+      <div class="contact-line">
+        North Nazimabad, Karachi | +92 331 3336084 | anishfaabrar@gmail.com |
+        <a href="https://www.linkedin.com/in/anishfa-abrar/" target="_blank">linkedin.com/in/anishfa-abrar</a>
+      </div>
     </header>
-    <div class="section-line"></div>
-    <div class="content">
-      <div class="left">
-        <section class="contact">
-          <h2>CONTACT</h2>
-          <div class="contact-info">
-            <i class="fa fa-phone"></i>
-            <span>+92 331 3336084</span>
-          </div>
-          <div class="contact-info">
-            <i class="fa fa-envelope"></i>
-            <span>anishfaabrar@gmail.com</span>
-          </div>
-          <div class="contact-info">
-            <i class="fa fa-map"></i>
-            <span>North Nazimabad, Karachi</span>
-          </div>
-        </section>
-        <section class="contact">
-          <h2>LINK</h2>
-          <div class="contact-info">
-            <i class="fa fa-linkedin"></i>
-            <a href="https://www.linkedin.com/in/anishfa-abrar/" target="_blank">linkedin.com/in/anishfa-abrar</a>
-          </div>
-        </section>
-        <section class="skills">
-          <h2>SKILLS</h2>
-          <ul class="list">
-            <li>Communication</li>
-            <!-- <i class="fa fa-star"></i> -->
-            <!-- <i class="fa fa-star"></i> -->
-            <!-- <i class="fa fa-star"></i> -->
-            <!-- <i class="fa fa-star"></i> -->
-            <!-- <i class="fa fa-star"></i> -->
-            <li>Administrative Skills</li>
-            <!-- <i class="fa fa-star"></i> -->
-            <!-- <i class="fa fa-star"></i> -->
-            <!-- <i class="fa fa-star"></i> -->
-            <!-- <i class="fa fa-star"></i> -->
-            <li>Time Management</li>
-            <!-- <i class="fa fa-star"></i> -->
-            <!-- <i class="fa fa-star"></i> -->
-            <!-- <i class="fa fa-star"></i> -->
-            <!-- <i class="fa fa-star"></i> -->
-            <!-- <i class="fa fa-star"></i> -->
-            <li>Classroom Management</li>
-            <!-- <i class="fa fa-star"></i> -->
-            <!-- <i class="fa fa-star"></i> -->
-            <!-- <i class="fa fa-star"></i> -->
-            <!-- <i class="fa fa-star"></i> -->
-            <!-- <i class="fa fa-star"></i> -->
-            <li>Patience</li>
-            <!-- <i class="fa fa-star"></i> -->
-            <!-- <i class="fa fa-star"></i> -->
-            <!-- <i class="fa fa-star"></i> -->
-            <!-- <i class="fa fa-star"></i> -->
-            <!-- <i class="fa fa-star"></i> -->
-            <li>Student Support</li>
-            <!-- <i class="fa fa-star"></i> -->
-            <!-- <i class="fa fa-star"></i> -->
-            <!-- <i class="fa fa-star"></i> -->
-            <!-- <i class="fa fa-star"></i> -->
-            <!-- <i class="fa fa-star"></i> -->
-            <li>Creative</li>
-          </ul>
-        </section>
-        <section class="skills">
-          <h2>LANGUAGES</h2>
-          <ul class="list">
-            <li>English</li>
-            <!-- <i class="fa fa-star"></i> -->
-            <!-- <i class="fa fa-star"></i> -->
-            <!-- <i class="fa fa-star"></i> -->
-            <!-- <i class="fa fa-star"></i> -->
-            <li>Urdu</li>
-            <!-- <i class="fa fa-star"></i> -->
-            <!-- <i class="fa fa-star"></i> -->
-            <!-- <i class="fa fa-star"></i> -->
-            <!-- <i class="fa fa-star"></i> -->
-            <!-- <i class="fa fa-star"></i> -->
-          </ul>
-        </section>
-      </div>
-      <div class="right">
-        <section class="experience">
-          <h2>ABOUT ME</h2>
-          <p>
-            As a seasoned Chemistry Teacher and Coordinator, I bring a wealth of expertise in curriculum development and
-            classroom management to the table. My innovative teaching strategies have been a catalyst for a remarkable
-            30% increase in average test scores, underscoring my commitment to elevating student achievement. I am
-            dedicated to creating a positive and stimulating learning atmosphere that encourages student success. My
-            robust communication and organizational abilities have consistently enhanced collaboration with peers and
-            stakeholders, ensuring a cohesive educational experience.
-          </p>
-        </section>
-        <section class="experience">
-          <h2>PROFESSIONAL EXPERIENCE</h2>
-          <div class="exp-span">
-            <h3>
-              Chemistry Teacher,
-              <div class="company">Future Degree College</div>
-            </h3>
-            <h5 class="company">July 2023 - May 2025</h5>
-          </div>
-          <ul class="bullets">
-            <li>Instructed students in the principles and applications of chemistry</li>
-            <li>Provided individualized instructions to struggling students</li>
-            <li>Collaborated with other teachers and administrators to develop curricula</li>
-            <li>Developed and administered exams, tests and assessments to assess student comprehension</li>
-          </ul>
-          <div class="exp-span">
-            <h3>
-              Chemistry Teacher,
-              <div class="company">Glow Education Academy</div>
-            </h3>
-            <h5 class="company">Jan 2021 - Jun 2023</h5>
-          </div>
-          <ul class="bullets">
-            <li>Taught and instructed students of class of 9th till 12th</li>
-            <li>Monitored student progress and adjusted instructions as needed</li>
-            <li>Encouraged students to think critically and provided assistance with problem-solving</li>
-            <li>Conducted regular lab experiments and demonstrations to facilitate student learning</li>
-          </ul>
-        </section>
 
-        <section class="projects">
-          <h2>EDUCATION</h2>
-          <div class="exp-span">
-            <h3>B.Ed.</h3>
-            <h5 class="company">April 2025 - Present</h5>
-          </div>
-          <ul class="bullets">
-            <li>In Progress from Virtual University</li>
-            <!-- <p style="font-weight: 600; margin: 0px">- Relevant coursework:</p>
-            <li>Organic and Inorganic chemistry</li>
-            <li>Physical and Analytical chemistry</li>
-            <li>Bio and Environmental chemistry</li>
-            <li>Applied and medicinal chemistry</li> -->
-          </ul>
+    <main>
+      <section>
+        <h2>Summary</h2>
+        <p class="summary">
+          Chemistry Teacher with experience teaching secondary and higher secondary students in grades 9-12. Skilled at
+          explaining core chemistry concepts, preparing students for exams, conducting practical demonstrations, and
+          supporting learners through clear instruction, regular assessment, and structured classroom management.
+        </p>
+      </section>
 
-          <div class="exp-span">
-            <h3>
-              BS Chemistry,
-              <div class="company">CGPA 3.47</div>
-            </h3>
-            <h5 class="company">Sep 2019 - Jan 2024</h5>
-          </div>
-          <ul class="bullets">
-            <li>Completed BS in Chemistry from Rawalpindi Women University</li>
-            <p style="font-weight: 600; margin: 0px">- Relevant coursework:</p>
-            <li>Organic and Inorganic chemistry</li>
-            <li>Physical and Analytical chemistry</li>
-            <li>Bio and Environmental chemistry</li>
-            <li>Applied and medicinal chemistry</li>
+      <section>
+        <h2>Professional Experience</h2>
+
+        <div class="experience-item">
+          <table class="item-header-table">
+            <tr>
+              <td class="title-cell">
+                <span class="role">Chemistry Teacher</span> — <span class="institution">Future Degree College</span>
+              </td>
+              <td class="date-cell">July 2023 - May 2025</td>
+            </tr>
+          </table>
+          <ul>
+            <li>
+              Taught chemistry concepts and applications to higher secondary students using clear explanations and
+              examples.
+            </li>
+            <li>Prepared lesson plans, class activities, quizzes, tests, and exam-focused revision materials.</li>
+            <li>
+              Supported struggling students through individual guidance, concept reinforcement, and regular progress
+              checks.
+            </li>
+            <li>
+              Collaborated with faculty and administration to align instruction with syllabus requirements and
+              assessment goals.
+            </li>
           </ul>
-        </section>
-      </div>
-    </div>
+        </div>
+
+        <div class="experience-item">
+          <table class="item-header-table">
+            <tr>
+              <td class="title-cell">
+                <span class="role">Chemistry Teacher</span> — <span class="institution">Glow Education Academy</span>
+              </td>
+              <td class="date-cell">Jan 2021 - Jun 2023</td>
+            </tr>
+          </table>
+          <ul>
+            <li>
+              Taught chemistry to students from class 9 to class 12, covering secondary and higher secondary topics.
+            </li>
+            <li>
+              Explained theoretical concepts through problem-solving, discussion, examples, and practical
+              demonstrations.
+            </li>
+            <li>Monitored student performance and adjusted instruction to improve understanding and exam readiness.</li>
+            <li>
+              Encouraged critical thinking, disciplined study habits, and confidence in solving chemistry questions.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>Core Skills</h2>
+        <ul class="skills-grid">
+          <li>Secondary and higher secondary instruction</li>
+          <li>Organic, inorganic, physical, analytical, & applied chemistry</li>
+          <li>Lesson planning and curriculum coverage</li>
+          <li>Board exam preparation and revision planning</li>
+          <li>Practical demonstrations and lab safety awareness</li>
+          <li>Assessment design, test preparation, and grading</li>
+          <li>Classroom management and student engagement</li>
+          <li>Individual student support and mentoring</li>
+          <li>English and Urdu communication</li>
+          <li>Time management and academic administration</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Education</h2>
+
+        <div class="education-item">
+          <table class="item-header-table">
+            <tr>
+              <td class="title-cell">
+                <span class="role">Master's in Industrial Chemistry</span> —
+                <span class="institution">NED University of Engineering and Technology</span>
+              </td>
+              <td class="date-cell">Ongoing</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="education-item">
+          <table class="item-header-table">
+            <tr>
+              <td class="title-cell">
+                <span class="role">B.Ed.</span> — <span class="institution">Virtual University</span>
+              </td>
+              <td class="date-cell">Ongoing</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="education-item">
+          <table class="item-header-table">
+            <tr>
+              <td class="title-cell">
+                <span class="role">BS Chemistry</span> — <span class="institution">Rawalpindi Women University</span>
+                <span class="metrics">(CGPA: 3.47)</span>
+              </td>
+              <td class="date-cell">Jan 2024</td>
+            </tr>
+          </table>
+        </div>
+      </section>
+
+      <section>
+        <h2>Languages</h2>
+        <ul>
+          <li>English (Professional)</li>
+          <li>Urdu (Native)</li>
+        </ul>
+      </section>
+    </main>
   </body>
 </html>
